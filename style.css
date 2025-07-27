@@ -1,0 +1,96 @@
+/* Basic Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* Add padding to the top to prevent content from being hidden by the fixed header */
+    padding-top: 80px; 
+    background-color: #f4f4f4;
+}
+
+/* Main Header Styling */
+.main-header {
+    position: fixed; /* This is key to keeping the menu at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 1000;
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.4s ease, padding 0.4s ease; /* Smooth transition for the change */
+}
+
+/* Scrolled State for the Header (added via JavaScript) */
+.main-header.scrolled {
+    background-color: #0056b3; /* Dark blue background when scrolled */
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Styling */
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Navigation Links Styling */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Prepare for hover effect */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* --- HOVER EFFECT --- */
+.main-nav ul li a:hover {
+    color: #aae0fa; /* Light blue color on hover */
+    border-bottom-color: #aae0fa; /* Underline appears on hover */
+}
+
+/* Basic styling for the content sections */
+.content .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1507525428034-b723a9ce6890') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.content .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.more-content {
+    padding: 40px;
+    background: #fff;
+}
+
+.more-content h2 {
+    margin-bottom: 20px;
+}
